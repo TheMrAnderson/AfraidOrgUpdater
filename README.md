@@ -2,7 +2,7 @@
 
 [![Docker Image CI](https://github.com/TheMrAnderson/AfraidOrgUpdater/actions/workflows/docker-image.yml/badge.svg)](https://github.com/TheMrAnderson/AfraidOrgUpdater/actions/workflows/docker-image.yml)
 
-Automatically update the IP address for Afraid.org by using a cron job in the container that runs every 5 minutes. The script was built using the Afraid.org cron script generation. You can check the /tmp/freedns_domain.log file inside the container to verify the update is happening every 5 minutes
+Automatically update the IP address for Afraid.org by using a cron job in the container that runs every 5 minutes. The script was built using the Afraid.org cron script generation. You can check the container logs to verify the update is happening every 5 minutes
 
 ## Arguments
 
