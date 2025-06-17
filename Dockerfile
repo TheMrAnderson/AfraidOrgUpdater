@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash curl cronie
 
 ADD ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
