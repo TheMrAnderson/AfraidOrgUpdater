@@ -6,4 +6,5 @@ mkdir -p /root/.cache
 (crontab -l 2>/dev/null; echo "PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin") | crontab -
 (crontab -l 2>/dev/null; echo "*/5 * * * * sleep 9 ; curl -s http://sync.afraid.org/u/$1/ >> /proc/1/fd/1 2>&1") | crontab -
 
-crond -f -d 0
+# Start crond in foreground with debug output
+crond -f -x ext,sch,proc,pars,load,misc
