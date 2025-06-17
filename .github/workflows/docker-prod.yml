@@ -1,10 +1,12 @@
-name: Docker Image CI
+name: Docker Build Prod - Stable
 
 on:
   push:
-    branches: [ "master" ]
+    branches-ignore:
+      - "master"
   pull_request:
-    branches: [ "master" ]
+    branches-ignore:
+      - "master"
 
 jobs:
 
@@ -25,4 +27,4 @@ jobs:
       uses: docker/build-push-action@v3
       with:
        push: true
-       tags: themranderson/afraidorgupdater:latest
+       tags: themranderson/afraidorgupdater:stable
